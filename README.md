@@ -12,21 +12,25 @@ This file will become your README and also the index of your documentation.
 
 Playing cards in python!
 
-
-<h2 id="Deck" class="doc_header"><code>class</code> <code>Deck</code><a href="https://github.com/hamelsmu/deck_of_cards/tree/master/deck_of_cards/deck.py#L9" class="source_link" style="float:right">[source]</a></h2>
-
-> <code>Deck</code>()
-
-Represents a deck of cards.
-Attributes:
-  cards: list of Card objects.
-
-
-```python
+```
+from deck_of_cards.deck import Deck
 d = Deck()
+```
+
+```
+d = Deck()
+print(f'Number of playing cards in the deck: {len(d.cards)}')
+```
+
+    Number of playing cards in the deck: 52
+
+
+```
 card = d.pop_card()
 print(card)
 ```
 
     King of Spades
 
+
+See the docs on `Deck` for more info.
