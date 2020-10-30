@@ -6,19 +6,27 @@ This file will become your README and also the index of your documentation.
 
 ## Install
 
-`pip install nbdev_thinkpy`
+`pip install deck_of_cards`
 
 ## How to use
 
-Fill me in please! Don't forget code examples:
+Playing cards in python!
+
+
+<h2 id="Deck" class="doc_header"><code>class</code> <code>Deck</code><a href="https://github.com/hamelsmu/deck_of_cards/tree/master/deck_of_cards/deck.py#L9" class="source_link" style="float:right">[source]</a></h2>
+
+> <code>Deck</code>()
+
+Represents a deck of cards.
+Attributes:
+  cards: list of Card objects.
+
 
 ```python
-1+1
+d = Deck()
+card = d.pop_card()
+print(card)
 ```
 
-
-
-
-    2
-
+    King of Spades
 
