@@ -44,7 +44,7 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install nbdev_thinkpy</code></p>
+<p><code>pip install deck_of_cards</code></p>
 
 </div>
 </div>
@@ -57,7 +57,7 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Fill me in please! Don't forget code examples:</p>
+<p>Playing cards in python!</p>
 
 </div>
 </div>
@@ -65,11 +65,40 @@ nb_path: "index.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="Deck" class="doc_header"><code>class</code> <code>Deck</code><a href="https://github.com/hamelsmu/deck_of_cards/tree/master/deck_of_cards/deck.py#L9" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Deck</code>()</p>
+</blockquote>
+<p>Represents a deck of cards.
+Attributes:
+  cards: list of Card objects.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">Deck</span><span class="p">()</span>
+<span class="n">card</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">pop_card</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">card</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -81,12 +110,10 @@ nb_path: "index.ipynb"
 
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>King of Spades
+</pre>
 </div>
-
 </div>
 
 </div>
