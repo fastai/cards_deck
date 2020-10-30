@@ -1,4 +1,4 @@
-repository: hamelsmu/deck_of_cards
+repository: hamelsmu/nbdev-think-python
 output: web
 topnav_title: deck_of_cards
 site_title: deck_of_cards
@@ -60,4 +60,4 @@ sidebars:
 - home_sidebar
 
 theme: jekyll-theme-cayman
-baseurl: /deck_of_cards/
+baseurl: /nbdev-think-python/
