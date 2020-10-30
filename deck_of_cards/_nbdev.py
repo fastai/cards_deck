@@ -8,8 +8,8 @@ index = {"Card": "00_card.ipynb",
 modules = ["card.py",
            "deck.py"]
 
-doc_url = "https://fastai.github.io/nbdev_thinkpy/"
+doc_url = "https://hamelsmu.github.io/deck_of_cards/"
 
-git_url = "https://github.com/fastai/nbdev_thinkpy/tree/master/"
+git_url = "https://github.com/hamelsmu/deck_of_cards/tree/master/"
 
 def custom_doc_links(name): return None

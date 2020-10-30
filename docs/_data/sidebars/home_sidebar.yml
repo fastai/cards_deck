@@ -16,6 +16,6 @@ entries:
       title: Title
       url: deck.html
     output: web
-    title: nbdev_thinkpy
+    title: deck_of_cards
   output: web
   title: Sidebar

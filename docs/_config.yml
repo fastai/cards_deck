@@ -1,7 +1,7 @@
-repository: hamelsmu/nbdev_thinkpy
+repository: hamelsmu/deck_of_cards
 output: web
-topnav_title: nbdev_thinkpy
-site_title: nbdev_thinkpy
+topnav_title: deck_of_cards
+site_title: deck_of_cards
 company_name: Hamel Husain
 description: a small project built with nbdev using think python examples.
 # Set to false to disable KaTeX math
@@ -60,4 +60,4 @@ sidebars:
 - home_sidebar
 
 theme: jekyll-theme-cayman
-baseurl: /nbdev_thinkpy/
+baseurl: /deck_of_cards/
