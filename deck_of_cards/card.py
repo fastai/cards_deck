@@ -46,3 +46,5 @@ class Card:
         return t1 < t2
 
     def __repr__(self): return self.__str__()
+
+    def foo(): pass

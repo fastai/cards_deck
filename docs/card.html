@@ -151,11 +151,62 @@ nb_path: "00_card.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include note.html content='Look at <a href="https://fastcore.fast.ai/test.html">fastcore&#8217;s testing utilities</a> for convenience functions that print out helpful error messages by default when there is an error. ' %}</p>
+<p>{% include note.html content='Look at <a href="https://fastcore.fast.ai/test.html">fastcore&#8217;s testing utilities</a> for convenience functions that print out helpful error messages by default when there is an error.  These convenience functions are an improvement upon using assert.' %}</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can show the docs for methods by calling <code>show_doc</code>.  For example, the code <code>show_doc(Card.__eq__)</code> produces the following documentation:</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Card.__eq__" class="doc_header"><code>Card.__eq__</code><a href="__main__.py#L28" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Card.__eq__</code>(<strong><code>other</code></strong>)</p>
+</blockquote>
+<p>Checks whether self and other have the same rank and suit.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">card1</span> <span class="o">=</span> <span class="n">Card</span><span class="p">(</span><span class="n">suit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rank</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">card2</span> <span class="o">=</span> <span class="n">Card</span><span class="p">(</span><span class="n">suit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rank</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">card1</span> <span class="o">==</span> <span class="n">card2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
