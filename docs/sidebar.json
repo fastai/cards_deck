@@ -2,6 +2,6 @@
   "deck_of_cards": {
     "Overview": "/",
     "Card": "card.html",
-    "Title": "deck.html"
+    "Deck": "deck.html"
   }
 }

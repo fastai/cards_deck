@@ -13,7 +13,7 @@ entries:
       title: Card
       url: card.html
     - output: web,pdf
-      title: Title
+      title: Deck
       url: deck.html
     output: web
     title: deck_of_cards
