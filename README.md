@@ -1,8 +1,8 @@
 # Deck of Cards
-> This README was also made from a Jupyter Notebook!
+> A minimal example of using nbdev.
 
 
-This file will become your README and also the index of your documentation.
+{% include important.html content='This file was automatically generated from a Jupyter Notebook using [nbdev](https://nbdev.fast.ai/). to change it you must edit [index.ipynb](https://github.com/fastai/deck_of_cards/blob/master/index.ipynb).' %}
 
 ## Install
 
@@ -12,12 +12,12 @@ This file will become your README and also the index of your documentation.
 
 Playing cards in python!
 
-```
+```python
 from deck_of_cards.deck import Deck
 d = Deck()
 ```
 
-```
+```python
 d = Deck()
 print(f'Number of playing cards in the deck: {len(d.cards)}')
 ```
@@ -25,7 +25,7 @@ print(f'Number of playing cards in the deck: {len(d.cards)}')
     Number of playing cards in the deck: 52
 
 
-```
+```python
 card = d.pop_card()
 print(card)
 ```
