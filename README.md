@@ -16,10 +16,6 @@ Playing cards in python!
 ```
 from deck_of_cards.deck import Deck
 d = Deck()
-```
-
-```
-d = Deck()
 print(f'Number of playing cards in the deck: {len(d.cards)}')
 ```
 
@@ -34,4 +30,4 @@ print(card)
     King of Spades
 
 
-See the docs on `Deck` for more info.
+See [the docs](https://fastai.github.io/deck_of_cards/) for more info.
