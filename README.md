@@ -7,7 +7,7 @@
 After cloning this repository:
 
 `pip install -e .`
-{% include note.html content='there is already a project called [deck_of_cards on pypi](https://pypi.org/project/deck-of-cards/).  This project has no relation to that.  This project is an example of how to create python packages with [nbdev](https://github.com/fastai/nbdev).' %}
+> There is already a project called [deck_of_cards on pypi](https://pypi.org/project/deck-of-cards/).  This project has no relation to that.  This project is an example of how to create python packages with [nbdev](https://github.com/fastai/nbdev).
 
 ## How to use
 
