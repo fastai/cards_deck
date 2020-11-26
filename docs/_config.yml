@@ -1,4 +1,4 @@
-repository: hamelsmu/deck_of_cards
+repository: fastai/deck_of_cards
 output: web
 topnav_title: deck_of_cards
 site_title: deck_of_cards
@@ -20,7 +20,7 @@ exclude:
   - .idea/
   - .gitignore
   - vendor
- 
+
 exclude: [vendor]
 
 highlighter: rouge
