@@ -15,7 +15,7 @@ format:
 
 website:
   title: "deck_of_cards"
-  description: "A description of your project"
+  description: "An example repository for nbprocess"
   execute: 
     enabled: false
   twitter-card: true

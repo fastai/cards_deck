@@ -11,7 +11,7 @@ d = { 'syms': { 'deck_of_cards.deck': { 'deck_of_cards.deck.Deck': 'https://Isaa
                                     'deck_of_cards.card.Card.foo': 'https://Isaac-Flath.github.io/deck_of_cards/card#Card.foo'}},
   'settings': { 'host': 'github',
                 'lib_name': 'deck_of_cards',
-                'description': 'A description of your project',
+                'description': 'An example repository for nbprocess',
                 'copyright': 'Put your copyright info here',
                 'keywords': 'nbprocess',
                 'user': 'Isaac-Flath',
