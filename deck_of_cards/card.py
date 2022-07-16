@@ -2,7 +2,7 @@
 
 # %% ../00_card.ipynb 3
 from __future__ import print_function, division
-
+from fastcore.all import *
 import random
 
 
@@ -45,3 +45,7 @@ class Card:
 
 # %% auto 0
 __all__ = ['Card']
+
+# %% ../00_card.ipynb 7
+@patch_to(Card)
+def bar(self): pass
