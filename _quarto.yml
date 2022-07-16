@@ -1,4 +1,4 @@
-ipynb-filters: [nbprocess_filter --debug]
+ipynb-filters: [nbprocess_filter]
 
 project:
   type: website
@@ -15,7 +15,7 @@ format:
 
 website:
   title: "deck_of_cards"
-  description: "An example repository for nbprocess"
+  description: "An example repository for nbdev"
   execute: 
     enabled: false
   twitter-card: true
@@ -27,9 +27,6 @@ website:
   navbar:
     background: primary
     search: true
-    left:
-      - text: Home
-        file: index.ipynb
     right:
       - icon: github
         href: https://github.com/Isaac-Flath/deck_of_cards/tree/main/
@@ -39,4 +36,3 @@ website:
 metadata-files: 
   - sidebar.yml
   - custom.yml
-

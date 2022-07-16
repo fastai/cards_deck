@@ -1,6 +1,7 @@
 website:
   sidebar:
     contents:
+      - index.ipynb
       - 00_card.ipynb
       - 01_deck.ipynb
-      - index.ipynb
+      - README.md

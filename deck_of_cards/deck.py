@@ -3,10 +3,10 @@
 # %% auto 0
 __all__ = ['Deck']
 
-# %% ../01_deck.ipynb 4
+# %% ../01_deck.ipynb 3
 from .card import Card
 
-# %% ../01_deck.ipynb 5
+# %% ../01_deck.ipynb 4
 class Deck:
     """Represents a deck of cards.
     Attributes:
@@ -14,39 +14,25 @@ class Deck:
     """
     
     def __init__(self):
-        """Initializes the Deck with 52 cards.
-        """
-        self.cards = []
-        for suit in range(4):
-            for rank in range(1, 14):
-                card = Card(suit, rank)
-                self.cards.append(card)
+        """Initializes the Deck with 52 cards."""
+        self.cards = [Card(suit, rank) for suit in range(4) for rank in range(1, 14)]
 
     def __str__(self):
-        """Returns a string representation of the deck.
-        """
-        res = []
-        for card in self.cards:
-            res.append(str(card))
-        return '\n'.join(res)
+        """Returns a string representation of the deck."""
+        return '\n'.join([str(card) in self.cards])
+    
 
-    def add_card(self, card):
-        """Adds a card to the deck.
-        card: Card
-        """
+    def add_card(self, card:Card):
+        """Adds a card to the deck."""
         self.cards.append(card)
 
     def remove_card(self, card):
-        """Removes a card from the deck or raises exception if it is not there.
-        
-        card: Card
-        """
+        """Removes a card from the deck or raises exception if it is not there."""
         self.cards.remove(card)
 
-    def pop_card(self, i=-1):
-        """Removes and returns a card from the deck.
-        i: index of the card to pop; by default, pops the last card.
-        """
+    def pop_card(self, i=-1 #index of the card to pop; by default, pops the last card.
+                ):
+        """Removes and returns a card from the deck."""
         return self.cards.pop(i)
 
     def shuffle(self):
@@ -57,11 +43,9 @@ class Deck:
         """Sorts the cards in ascending order."""
         self.cards.sort()
 
-    def move_cards(self, hand, num):
-        """Moves the given number of cards from the deck into the Hand.
-        hand: destination Hand object
-        num: integer number of cards to move
-        """
-        for i in range(num):
-            hand.add_card(self.pop_card())
-
+    def move_cards(self, 
+                   hand, # destination Hand object 
+                   num:int # integer number of cards to move
+                  ):
+        "Moves the given number of cards from the deck into the Hand."
+        for i in range(num): hand.add_card(self.pop_card())
