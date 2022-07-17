@@ -59,13 +59,13 @@ def draw_n(n:int, #number of cards to draw
     if replace: return [d.cards[random.choice(range(len(d.cards)))] for _ in range(n)]
     else: return d.cards[:n]
 
-# %% ../01_deck.ipynb 20
+# %% ../01_deck.ipynb 21
 from sys import stdout
 from pathlib import Path
 from fastcore.foundation import L
 from fastcore.script import call_parse
 
-# %% ../01_deck.ipynb 21
+# %% ../01_deck.ipynb 22
 @call_parse
 def draw_cards(n:int, #number of cards to draw
                replace:bool=True, # whether or not draw with replacement
