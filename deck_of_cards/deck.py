@@ -50,7 +50,9 @@ class Deck:
         for i in range(num): hand.add_card(self.pop_card())
 
 # %% ../01_deck.ipynb 14
-def draw_n(n, replace=True):
+def draw_n(n:int, #number of cards to draw
+           replace:bool=True # whether or not draw with replacement
+          ):
     "draw n cards"
     d = Deck()
     d.shuffle()
