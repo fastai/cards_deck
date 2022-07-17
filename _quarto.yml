@@ -22,14 +22,14 @@ website:
   open-graph: true
   reader-mode: true
   repo-branch: main
-  repo-url: https://github.com/Isaac-Flath/deck_of_cards/tree/main/
+  repo-url: https://github.com/fastai/deck_of_cards/tree/main/
   repo-actions: [issue]
   navbar:
     background: primary
     search: true
     right:
       - icon: github
-        href: https://github.com/Isaac-Flath/deck_of_cards/tree/main/
+        href: https://github.com/fastai/deck_of_cards/tree/main/
   sidebar:
     style: "floating"
 

@@ -16,10 +16,12 @@ class Card:
 
     def __init__(self, suit=0, rank=2):
         self.suit, self.rank = suit, rank
+        self.suit_nm = Card.suit_names[self.suit]
+        self.rank_nm = Card.rank_names[self.rank]
 
     def __str__(self):
         "Returns a human-readable string representation."
-        return f'{Card.rank_names[self.rank]} of {Card.suit_names[self.suit]}'
+        return f'{self.rank_nm} of {self.suit_nm}'
 
     def __eq__(self, other) -> bool:
         "Checks whether self and other have the same rank and suit."
