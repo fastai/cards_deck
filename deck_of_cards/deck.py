@@ -4,74 +4,50 @@
 __all__ = ['Deck', 'draw_n', 'draw_cards']
 
 # %% ../01_deck.ipynb 3
-from .card import Card
+from .card import *
+from fastcore.basics import *
 import random
 
 # %% ../01_deck.ipynb 4
 class Deck:
-    """Represents a deck of cards.
-    Attributes:
-      cards: list of Card objects.
-    """
+    "Represents a deck of cards"
+    def __init__(self): self.cards = [Card(s, r) for s in range(4) for r in range(1, 14)]
+    def __str__(self): return '; '.join(map(str, self.cards))
+    __repr__ = __str__
     
-    def __init__(self):
-        "Initializes the Deck with 52 cards."
-        self.cards = [Card(suit, rank) for suit in range(4) for rank in range(1, 14)]
-
-    def __str__(self):
-        "Returns a string representation of the deck."
-        return '\n'.join([str(card) in self.cards])
-    
-    def add_card(self, card:Card):
-        "Adds a card to the deck."
+    def add(self,
+            card:Card): # Card to add
+        "Adds `card` to the deck"
         self.cards.append(card)
 
-    def remove_card(self, card):
-        "Removes a card from the deck or raises exception if it is not there."
+    def remove(self,
+               card:Card): # Card to remove
+        "Removes `card` from the deck or raises exception if it is not there"
         self.cards.remove(card)
 
-    def pop_card(self, i=-1):
-        "Removes and returns a card from the deck."
-        return self.cards.pop(i)
-
     def shuffle(self):
-        """Shuffles the cards in this deck."""
+        "Shuffles the cards in this deck"
         random.shuffle(self.cards)
 
-    def sort(self):
-        """Sorts the cards in ascending order."""
-        self.cards.sort()
-
-    def move_cards(self, 
-                   hand, # destination Hand object 
-                   num:int # integer number of cards to move
-                  ):
-        "Moves the given number of cards from the deck into the Hand."
-        for i in range(num): hand.add_card(self.pop_card())
-
-# %% ../01_deck.ipynb 14
+# %% ../01_deck.ipynb 18
 def draw_n(n:int, #number of cards to draw
-           replace:bool=True # whether or not draw with replacement
-          ):
-    "draw n cards"
+           replace:bool=True): # whether or not draw with replacement
+    "Draw `n` cards, with replacement iif `replace`"
     d = Deck()
     d.shuffle()
     if replace: return [d.cards[random.choice(range(len(d.cards)))] for _ in range(n)]
     else: return d.cards[:n]
 
-# %% ../01_deck.ipynb 21
-from sys import stdout
+# %% ../01_deck.ipynb 27
 from pathlib import Path
-from fastcore.foundation import L
 from fastcore.script import call_parse
 
-# %% ../01_deck.ipynb 22
+# %% ../01_deck.ipynb 28
 @call_parse
-def draw_cards(n:int, #number of cards to draw
+def draw_cards(n:int, # number of cards to draw
                replace:bool=True, # whether or not draw with replacement
-               outfile:str=None #output file, defaults to stdout
-               ):
-    "Draw `n` cards optionally with replacement."
+               outfile:str=None): # output file, defaults to stdout
+    "Draw `n` cards optionally with replacement"
     cards = draw_n(n, replace=replace)
-    strcards = '\n'.join(L(cards).map(str))
-    stdout.write(strcards) if outfile is None else Path(outfile).write_text(strcards)
+    strcards = '\n'.join(map(str, cards))
+    print(strcards) if outfile is None else Path(outfile).write_text(strcards)
