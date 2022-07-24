@@ -33,7 +33,10 @@ d = { 'settings': { 'audience': 'Developers',
                                     'deck_of_cards.card.suits': 'https://fastai.github.io/deck_of_cards/card#suits'},
             'deck_of_cards.deck': { 'deck_of_cards.deck.Deck': 'https://fastai.github.io/deck_of_cards/deck#Deck',
                                     'deck_of_cards.deck.Deck.add': 'https://fastai.github.io/deck_of_cards/deck#Deck.add',
+                                    'deck_of_cards.deck.Deck.pop': 'https://fastai.github.io/deck_of_cards/deck#Deck.pop',
                                     'deck_of_cards.deck.Deck.remove': 'https://fastai.github.io/deck_of_cards/deck#Deck.remove',
                                     'deck_of_cards.deck.Deck.shuffle': 'https://fastai.github.io/deck_of_cards/deck#Deck.shuffle',
+                                    'deck_of_cards.deck.Hand': 'https://fastai.github.io/deck_of_cards/deck#Hand',
                                     'deck_of_cards.deck.draw_cards': 'https://fastai.github.io/deck_of_cards/deck#draw_cards',
-                                    'deck_of_cards.deck.draw_n': 'https://fastai.github.io/deck_of_cards/deck#draw_n'}}}
+                                    'deck_of_cards.deck.draw_n': 'https://fastai.github.io/deck_of_cards/deck#draw_n',
+                                    'deck_of_cards.deck.move_cards': 'https://fastai.github.io/deck_of_cards/deck#move_cards'}}}
