@@ -1,5 +1,5 @@
 sample.txt
-docs/
+_docs/
 
 *.bak
 .gitattributes

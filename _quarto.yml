@@ -2,7 +2,7 @@ ipynb-filters: [nbdev_filter]
 
 project:
   type: website
-  output-dir: docs
+  output-dir: _docs
   preview:
     port: 3000
     browser: false
@@ -14,7 +14,7 @@ format:
     toc: true
 
 website:
-  title: "deck_of_cards"
+  title: "cards_deck"
   description: "An example repository for nbdev"
   execute: 
     enabled: false
@@ -22,14 +22,14 @@ website:
   open-graph: true
   reader-mode: true
   repo-branch: main
-  repo-url: https://github.com/fastai/deck_of_cards/tree/main/
+  repo-url: https://github.com/fastai/cards_deck
   repo-actions: [issue]
   navbar:
     background: primary
     search: true
     right:
       - icon: github
-        href: https://github.com/fastai/deck_of_cards/tree/main/
+        href: https://github.com/fastai/cards_deck
   sidebar:
     style: "floating"
 
