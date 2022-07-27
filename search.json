@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "card.html",
+    "href": "card.html",
+    "title": "Card",
+    "section": "",
+    "text": "Creating Cards\nCard is a class that represents a single card in a deck of cards. We can create cards like this:\n\nc = Card(suit=1, rank=3)\nc\n\n3♦️\n\n\nIn these docs we’ll generally show the expected output from our code like so:\n\ntest_eq(str(c), '3♦️')\n\n\nc2 = Card(suit=2, rank=11)\ntest_eq(str(c2), 'J❤️')\n\n\n\n\n\n\n\nTip\n\n\n\nThese test_eq statements are not just documentation, they are also unit tests! These cells will get tested automatically with continous integration. You can also run tests locally with the command nbdev_test. If you do not want to show a test in your docs, you can choose to hide cells with the #|hide directive.\n\n\n\n\nComparing Cards\nYou can also compare cards like so:\n\ntest_eq(c2 > c, True)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Deck of Cards",
+    "section": "",
+    "text": "This repo uses code based on Allen Downey’s ThinkPython2."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "Deck of Cards",
+    "section": "Install",
+    "text": "Install\nAfter cloning this repository:\npip install -e .\n\n\n\n\n\n\nDanger\n\n\n\nThis project is an example of how to create python packages with nbdev. It’s not a fully-fledged card dealing library!"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "Deck of Cards",
+    "section": "How to use",
+    "text": "How to use\nPlaying cards in python!\n\nfrom cards_deck.deck import Deck\nd = Deck()\nprint(f'Number of playing cards in the deck: {len(d)}')\n\nNumber of playing cards in the deck: 52\n\n\n\ncard = d.pop()\ncard, len(d)\n\n(K♠️, 51)\n\n\nSee the docs for more info.\n\nThe draw_cards cli:\nWe included a handy cli you can use to draw cards as well!\n\n!draw_cards -h\n\nusage: draw_cards [-h] [--replace] [--outfile OUTFILE] n\n\nDraw `n` cards optionally with replacement\n\npositional arguments:\n  n                  number of cards to draw\n\noptional arguments:\n  -h, --help         show this help message and exit\n  --replace          whether or not draw with replacement (default: False)\n  --outfile OUTFILE  output file, defaults to stdout\n\n\n\n!draw_cards 10\n\n5❤️\n6❤️\n10♠️\n4♣️\nA♣️\nA❤️\n9❤️\n4❤️\nK❤️\n3♣️"
+  },
+  {
+    "objectID": "deck.html",
+    "href": "deck.html",
+    "title": "Deck",
+    "section": "",
+    "text": "Deck ()\n\nRepresents a deck of cards\nA Deck of cards is a collection of Card objects:\nThere are 52 cards in a deck.\nThere are 51 cards left in the deck now.\nYou can show the docs for methods not created with patch by calling show_doc. For example, the code show_doc(Deck.remove) produces the following documentation:\nIf we remove a card from the Deck we can verify that it no longer exists:\nHowever, another card that we haven’t removed, such as the 10 of hearts will still be in the Deck of cards because we haven’t removed it:"
+  },
+  {
+    "objectID": "deck.html#drawing-cards-with-replacement",
+    "href": "deck.html#drawing-cards-with-replacement",
+    "title": "Deck",
+    "section": "Drawing Cards With Replacement",
+    "text": "Drawing Cards With Replacement\nLet’s try something fun with our deck of cards, drawing a card with replacement:\n\n\n\n\ndraw_n\n\n draw_n (n:int, replace:bool=True)\n\nDraw n cards, with replacement iif replace\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nn\nint\n\nnumber of cards to draw\n\n\nreplace\nbool\nTrue\nwhether or not draw with replacement\n\n\n\n\n\n\n\nsample = draw_n(10)\nsample\n\n[5♣️, 3♣️, 8♣️, 9❤️, 10♦️, 7♠️, 8♣️, 6❤️, 5❤️, A❤️]"
+  },
+  {
+    "objectID": "deck.html#visualizing-the-results",
+    "href": "deck.html#visualizing-the-results",
+    "title": "Deck",
+    "section": "Visualizing the results",
+    "text": "Visualizing the results\nThis isn’t terribly interesting from a statistical perspective. However, its an example of how you can include visualizations in your nbdev projects!\n\n\n\n\n\n\nNote\n\n\n\nNotice how we are hiding just the input with #|echo: false, so readers can see the output but hide the code. You can also fold the code using the #|code-fold: true directive."
+  },
+  {
+    "objectID": "deck.html#create-a-cli-advanced",
+    "href": "deck.html#create-a-cli-advanced",
+    "title": "Deck",
+    "section": "Create a CLI (Advanced)",
+    "text": "Create a CLI (Advanced)\nWe can create a CLI with @call parse\n\n\n\n\ndraw_cards\n\n draw_cards (n:int, replace:bool=True, outfile:str=None)\n\nDraw n cards optionally with replacement\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nn\nint\n\nnumber of cards to draw\n\n\nreplace\nbool\nTrue\nwhether or not draw with replacement\n\n\noutfile\nstr\nNone\noutput file, defaults to stdout\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nWe normally wouldn’t repeat all of these arguments when one function is wrapping another one. Instead, we would use delegates. However, we wanted to keep this tutorial simple, so we didn’t use that here.\n\n\n\nfname = 'sample.txt'\ndraw_cards(10, outfile=fname)\nprint(Path(fname).read_text())\n\n10❤️\n9❤️\n3♣️\nQ♣️\nJ♣️\n4♠️\n2♠️\n2❤️\n9♦️\n5♠️"
+  }
+]
