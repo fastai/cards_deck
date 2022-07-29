@@ -41,7 +41,7 @@ card, len(d)
 
     (K♠️, 51)
 
-See [the docs](https://isaac-flath.github.io/deck_of_cards/) for more
+See [the docs](https://fastai.github.io/cards_deck/) for more
 info.
 
 ### The `draw_cards` cli:
